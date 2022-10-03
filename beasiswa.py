@@ -3,9 +3,10 @@
 #Developer Kelompok 3
 
 def beasiswa1():
+    print("Beasiswa jalur keterangan kurang mampu")
     print('')
     print("Masukkan penghasilan orang tua/wali")
-    print("Format: Contoh: RP 100.000, inputkan \"1000000\"")
+    print("Contoh: RP 1.000.000, inputkan \"1000000\"")
     penghasilan_ortu = int(input("Input: "))
     print('')
     print("Masukkan banyaknya anggota keluarga")
@@ -13,23 +14,24 @@ def beasiswa1():
     jumlah_anggota_keluarga = int(input("Input: "))
     if (penghasilan_ortu/jumlah_anggota_keluarga) < 500000:
         print('')
-        print("Berhak mendapatkan beasiswa")
+        print("Selamat anda mendapatkan beasiswa")
     else:
         print('')
-        print("Tidak berhak mendapatkan beasiswa")
+        print("Mohon maaf anda tidak mendapatkan beasiswa")
 
 def beasiswa2():
+    print("Beasiswa jalur IPK")
     print("Masukkan IPK")
-    print("Format: misal IPK 3.00 masukkan 3.00")
+    print("Contoh: IPK 3.00 masukkan 3.00")
     ipk = float(input("IPK: "))
     if (ipk > 4.00 or ipk < 0.00):
         print("Input salah")
     elif (ipk >= 3.00):
         print('')
-        print("Berhak mendapatkan beasiswa")
+        print("Selamat anda mendapatkan beasiswa")
     else:
         print('')
-        print("Tidak berhak mendapatkan beasiswa")
+        print("Mohon maaf anda tidak mendapatkan beasiswa")
 
 def beasiswa3():
     print("Beasiswa jalur KIP")
