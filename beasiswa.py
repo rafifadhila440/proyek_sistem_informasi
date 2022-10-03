@@ -5,13 +5,13 @@
 def beasiswa1():
     print('')
     print("Masukkan penghasilan orang tua/wali")
-    print("Format: misal penghasilan RP 100.000, inputkan \"1000000\"")
-    portu = int(input("Input: "))
+    print("Format: Contoh: RP 100.000, inputkan \"1000000\"")
+    penghasilan_ortu = int(input("Input: "))
     print('')
     print("Masukkan banyaknya anggota keluarga")
     print("Format: misal banyaknya anggota keluarga adalah tiga orang maka inputkan \"3\"")
-    janggotak = int(input("Input: "))
-    if (portu/janggotak) < 500000:
+    jumlah_anggota_keluarga = int(input("Input: "))
+    if (penghasilan_ortu/jumlah_anggota_keluarga) < 500000:
         print('')
         print("Berhak mendapatkan beasiswa")
     else:
@@ -31,16 +31,37 @@ def beasiswa2():
         print('')
         print("Tidak berhak mendapatkan beasiswa")
 
+def beasiswa3():
+    print("Beasiswa jalur KIP")
+    print(" ")
+
+def beasiswa4():
+    print("Beasiswa Jalur Prestasi")
+    print(" ")
+
+def beasiswa5():
+    print("Beasiswa Jalur Talenta")
+    print(" ")
+
+def beasiswa6():
+    print("Beasiswa BIKOM")
+    print(" ")
+
+
 kondisi = True
 
 while(kondisi == True):
     print('')
     print("Program Penentuan Beasiswa")
     print("================================")
-    print('Pilih jenis beasiswa')
+    print('Pilih kategori beasiswa')
     print('1. Beasiswa kurang mampu')
-    print('2. Beasiswa prestasi akademik')
-    print('3. Keluar')
+    print('2. Beasiswa jalur IPK')
+    print('3. Beasiswa jalur KIP')
+    print('4. Beasiswa jalur Prestasi')
+    print('5. Beasiswa jalur Talenta')
+    print('6. Beasiswa jalur Bikom')
+    print('7. Keluar')
 
     pilihan = int(input('Jenis beasiswa yang dipilih '))
     if pilihan == 1:
@@ -48,6 +69,14 @@ while(kondisi == True):
     elif pilihan == 2:
         beasiswa2()
     elif pilihan == 3:
+        beasiswa3()
+    elif pilihan == 4:
+        beasiswa4()
+    elif pilihan == 5:
+        beasiswa5()
+    elif pilihan == 6:
+        beasiswa6    
+    elif pilihan == 7:
         print("Program diakhiri...")
         kondisi = False
     else:
