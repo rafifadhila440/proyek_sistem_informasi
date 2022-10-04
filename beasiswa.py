@@ -2,6 +2,7 @@
 #Dasar Pemrograman
 #Developer Kelompok 3
 
+#Beasiswa Jalur Keterangan Kurang Mampu
 def beasiswa1():
     print("Beasiswa jalur keterangan kurang mampu")
     print('')
@@ -19,6 +20,7 @@ def beasiswa1():
         print('')
         print("Mohon maaf anda tidak mendapatkan beasiswa")
 
+#Beasiswa Jalur IPK
 def beasiswa2():
     print("Beasiswa jalur IPK")
     print("Masukkan IPK")
@@ -33,25 +35,35 @@ def beasiswa2():
         print('')
         print("Mohon maaf anda tidak mendapatkan beasiswa")
 
+#Beasiswa Jalur KIP
 def beasiswa3():
+    print("==========================")
     print("Beasiswa jalur KIP")
-    print(" ")
+    nik = input("Masukkan nomor NIK : ")
+    nisn = input("Masukkan nomor NISN : ")
+    npsn = input("Masukkan nomor NPSN : ")
+    email = input("Masukkan alamat E-Mail : ")
+    #yg ada nik, nisn, npsn dan alamat email semuanya hrus terisi kalau tdk terisi ya tidak dpt beasiswa
 
+#Beasiswa Jalur Prentasi
 def beasiswa4():
+    print("==========================")
     print("Beasiswa Jalur Prestasi")
-    print(" ")
 
+#Beasiswa Jalur Talenta
 def beasiswa5():
+    print("==========================")
     print("Beasiswa Jalur Talenta")
-    print(" ")
 
+#Beasiswa BIKOM
 def beasiswa6():
+    print("==========================")
     print("Beasiswa BIKOM")
-    print(" ")
 
 
 kondisi = True
 
+#Menu pilihan program
 while(kondisi == True):
     print('')
     print("Program Penentuan Beasiswa")
