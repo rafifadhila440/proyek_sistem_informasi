@@ -3,47 +3,103 @@
 #Developer Kelompok 3
 
 #Beasiswa Jalur Keterangan Kurang Mampu
+import os
 def beasiswa1():
-    print("Beasiswa jalur keterangan kurang mampu")
+    #print("=" * 90)
+    print("Beasiswa jalur Keterangan Kurang Mampu")
+    print('')
+    nama = input("Masukkan nama penerima beasiswa : ")
     print('')
     print("Masukkan penghasilan orang tua/wali")
-    print("Contoh: RP 1.000.000, inputkan \"1000000\"")
-    penghasilan_ortu = int(input("Input: "))
+    print("Contoh: RP 100.000, maka masukkan \"1000000\"")
+    penghasilan_ortu = int(input("Masukkan penghasilan : "))
     print('')
-    print("Masukkan banyaknya anggota keluarga")
-    print("Format: misal banyaknya anggota keluarga adalah tiga orang maka inputkan \"3\"")
-    jumlah_anggota_keluarga = int(input("Input: "))
+    print("Masukkan jumlah anggota keluarga")
+    print("Contoh: Banyaknya anggota keluarga adalah tiga orang maka masukkan \"3\"")
+    jumlah_anggota_keluarga = int(input("Jumlah anggota keluarga : "))
+    os.system('cls')
     if (penghasilan_ortu/jumlah_anggota_keluarga) < 500000:
-        print('')
-        print("Selamat anda mendapatkan beasiswa")
+        print("=" * 90)
+        print("Beasiswa jalur Keterangan Kurang Mampu")
+        print("Nama penerima beasiswa \t\t: ", nama)
+        print("Penghasilan Orang Tua/Wali \t: ", penghasilan_ortu)
+        print("Jumlah anggota keluarga \t: ", jumlah_anggota_keluarga)
+        print(nama, "berhak mendapatkan beasiswa")
+        print("=" * 90)
     else:
-        print('')
-        print("Mohon maaf anda tidak mendapatkan beasiswa")
+        print("=" * 90)
+        print("Beasiswa jalur Keterangan Kurang Mampu")
+        print("Nama penerima beasiswa \t\t: ", nama)
+        print("Penghasilan Orang Tua/Wali \t: ", penghasilan_ortu)
+        print("Jumlah anggota keluarga \t: ", jumlah_anggota_keluarga)
+        print("Mohon maaf", nama, "tidak mendapatkan beasiswa")
+        print("=" * 90)
 
 #Beasiswa Jalur IPK
 def beasiswa2():
+    #print("=" * 90)
     print("Beasiswa jalur IPK")
-    print("Masukkan IPK")
-    print("Contoh: IPK 3.00 masukkan 3.00")
-    ipk = float(input("IPK: "))
+    print('')
+    nama = input("Masukkan nama penerima beasiswa : ")
+    print('')
+    print("Masukkan nilai IPK")
+    print("Contoh: IPK 3.00 masukkan \"3.00\"")
+    ipk = float(input("IPK : "))
+    os.system('cls')
     if (ipk > 4.00 or ipk < 0.00):
-        print("Input salah")
-    elif (ipk >= 3.00):
-        print('')
-        print("Selamat anda mendapatkan beasiswa")
+        print("Maaf input salah")
+    elif (ipk >= 3.50):
+        print("=" * 90)
+        print("Beasiswa jalur IPK")
+        print("Nama penerima beasiswa \t: ", nama)
+        print("IPK \t\t\t: ", ipk)
+        print(nama, "berhak mendapatkan beasiswa")
+        print("=" * 90)
     else:
-        print('')
-        print("Mohon maaf anda tidak mendapatkan beasiswa")
+        print("=" * 90)
+        print("Beasiswa jalur IPK")
+        print("Nama penerima beasiswa \t: ", nama)
+        print("IPK \t\t\t: ", ipk)
+        print("Mohon maaf", nama, "tidak mendapatkan beasiswa")
+        print("=" * 90)
 
-#Beasiswa Jalur KIP
+#Beasiswa Jalur SKTM
 def beasiswa3():
-    print("==========================")
-    print("Beasiswa jalur KIP")
-    nik = input("Masukkan nomor NIK : ")
-    nisn = input("Masukkan nomor NISN : ")
-    npsn = input("Masukkan nomor NPSN : ")
-    email = input("Masukkan alamat E-Mail : ")
-    #yg ada nik, nisn, npsn dan alamat email semuanya hrus terisi kalau tdk terisi ya tidak dpt beasiswa
+    #print("=" * 90)
+    print("Beasiswa jalur SKTM")
+    print('')
+    nama = input("Masukkan nama calon penerima : ")
+    print('')
+    print("Masukkan nilai IPK")
+    print("Contoh: IPK 3.00 masukkan \"3.00\"")
+    ipk = float(input("Nilai IPK : "))
+    sktm = input("Apakah anda memiliki SKTM? [ada (y) / tidak (n)] : ")
+    os.system('cls')
+    if (ipk >= 3.50):
+        if (sktm == "ada" or sktm == "y"):
+            print("=" * 90)
+            print("Beasiswa jalur SKTM")
+            print("Nama penerima beasiswa \t: ", nama)
+            print("IPK \t\t\t: ", ipk)
+            print("SKTM \t\t\t: ", "Ada")
+            print("Selamat", nama, "berhak mendapatkan beasiswa")
+            print("=" * 90)
+        else:
+            print("=" * 90)
+            print("Beasiswa jalur SKTM")
+            print("Nama penerima beasiswa \t: ", nama)
+            print("IPK \t\t\t: ", ipk)
+            print("SKTM \t\t\t: ", "Belum Ada")
+            print("Mohon maaf", nama, "tidak mendapatkan beasiswa,", nama, "harus memiliki SKTM")
+            print("=" * 90)
+    else:
+        print("=" * 90)
+        print("Beasiswa jalur SKTM")
+        print("Nama penerima beasiswa \t: ", nama)
+        print("IPK \t\t\t: ", ipk)
+        print("SKTM \t\t\t: ", "Belum Ada")
+        print("=" * 90)
+        print("Mohon maaf", nama, "tidak mendapatkan beasiswa")
 
 #Beasiswa Jalur Prentasi
 def beasiswa4():
@@ -67,17 +123,15 @@ kondisi = True
 while(kondisi == True):
     print('')
     print("Program Penentuan Beasiswa")
-    print("================================")
+    print("=" * 90)
     print('Pilih kategori beasiswa')
     print('1. Beasiswa kurang mampu')
     print('2. Beasiswa jalur IPK')
-    print('3. Beasiswa jalur KIP')
-    print('4. Beasiswa jalur Prestasi')
-    print('5. Beasiswa jalur Talenta')
-    print('6. Beasiswa jalur Bikom')
-    print('7. Keluar')
+    print('3. Beasiswa jalur SKTM')
+    print('4. Keluar')
 
     pilihan = int(input('Jenis beasiswa yang dipilih '))
+    os.system('cls')
     if pilihan == 1:
         beasiswa1()
     elif pilihan == 2:
@@ -85,13 +139,9 @@ while(kondisi == True):
     elif pilihan == 3:
         beasiswa3()
     elif pilihan == 4:
-        beasiswa4()
-    elif pilihan == 5:
-        beasiswa5()
-    elif pilihan == 6:
-        beasiswa6    
-    elif pilihan == 7:
+        print("ROGER")
         print("Program diakhiri...")
+        print("Sampai Jumpa Lagi :) ")
         kondisi = False
     else:
-        print("Input salah")
+        print("Maaf input salah")
