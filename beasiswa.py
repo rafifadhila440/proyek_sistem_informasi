@@ -1,6 +1,5 @@
-#Program beasiswa ceritanya
-#Dasar Pemrograman
-#Developer Kelompok 3
+#Proyek Dasar Pemrograman Aplikasi Beasiswa
+#Kelompok 3
 
 #Beasiswa Jalur Bidikmisi
 import os
