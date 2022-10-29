@@ -2,11 +2,11 @@
 #Dasar Pemrograman
 #Developer Kelompok 3
 
-#Beasiswa Jalur Keterangan Kurang Mampu
+#Beasiswa Jalur Bidikmisi
 import os
 def beasiswa1():
     #print("=" * 90)
-    print("Beasiswa jalur Keterangan Kurang Mampu")
+    print("Beasiswa jalur Bidikmisi")
     print('')
     nama = input("Masukkan nama penerima beasiswa : ")
     print('')
@@ -35,10 +35,10 @@ def beasiswa1():
         print("Mohon maaf", nama, "tidak mendapatkan beasiswa")
         print("=" * 90)
 
-#Beasiswa Jalur IPK
+#Beasiswa Jalur Prestasi
 def beasiswa2():
     #print("=" * 90)
-    print("Beasiswa jalur IPK")
+    print("Beasiswa jalur Prestasi")
     print('')
     nama = input("Masukkan nama penerima beasiswa : ")
     print('')
@@ -125,8 +125,8 @@ while(kondisi == True):
     print("Program Penentuan Beasiswa")
     print("=" * 90)
     print('Pilih kategori beasiswa')
-    print('1. Beasiswa kurang mampu')
-    print('2. Beasiswa jalur IPK')
+    print('1. Beasiswa jalur Bidikmisi')
+    print('2. Beasiswa jalur Prestasi')
     print('3. Beasiswa jalur SKTM')
     print('4. Keluar')
 
