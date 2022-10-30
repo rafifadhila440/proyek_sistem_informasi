@@ -1,4 +1,4 @@
-print("Anggota Kelompok")
+print("Anggota Kelompok 3")
 print("1. Rafi Fadhila Ramadhani")
 print("2. Enrike Manurung")
 print("3. Diana Permatasari")
