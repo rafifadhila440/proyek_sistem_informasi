@@ -52,14 +52,14 @@ def beasiswa2():
         print("Beasiswa jalur IPK")
         print("Nama penerima beasiswa \t: ", nama)
         print("IPK \t\t\t: ", ipk)
-        print(nama, "berhak mendapatkan beasiswa")
+        print(nama, "berhak mendapatkan beasiswa Bidikmisi")
         print("=" * 90)
     else:
         print("=" * 90)
         print("Beasiswa jalur IPK")
         print("Nama penerima beasiswa \t: ", nama)
         print("IPK \t\t\t: ", ipk)
-        print("Mohon maaf", nama, "tidak mendapatkan beasiswa")
+        print("Mohon maaf", nama, "tidak mendapatkan beasiswa Bidikmisi")
         print("=" * 90)
 
 #Beasiswa Jalur SKTM
@@ -81,7 +81,7 @@ def beasiswa3():
             print("Nama penerima beasiswa \t: ", nama)
             print("IPK \t\t\t: ", ipk)
             print("SKTM \t\t\t: ", "Ada")
-            print("Selamat", nama, "berhak mendapatkan beasiswa")
+            print(nama, "berhak mendapatkan beasiswa SKTM")
             print("=" * 90)
         else:
             print("=" * 90)
@@ -98,23 +98,77 @@ def beasiswa3():
         print("IPK \t\t\t: ", ipk)
         print("SKTM \t\t\t: ", "Belum Ada")
         print("=" * 90)
-        print("Mohon maaf", nama, "tidak mendapatkan beasiswa")
+        print("Mohon maaf", nama, "tidak mendapatkan beasiswa SKTM")
 
-#Beasiswa Jalur Prentasi
+#Beasiswa Jalur Tahfidz
 def beasiswa4():
-    print("==========================")
-    print("Beasiswa Jalur Prestasi")
+    #print("=" * 90)
+    print("Beasiswa jalur Tahfidz")
+    print('')
+    nama = input("Masukkan nama penerima beasiswa : ")
+    hafalan_juz = int(input("Masukkan jumlah hafalan Juz : "))
+    print('')
+    os.system('cls')
+    if (hafalan_juz >= 10):
+        print("=" * 90)
+        print("Beasiswa jalur Tahfidz")
+        print("Nama penerima beasiswa \t: ", nama)
+        print("Jumlah hafalan Juz \t: ", hafalan_juz)
+        print(nama, "berhak mendapatkan beasiswa Tahfidz")
+        print("=" * 90)
+    else:
+        print("=" * 90)
+        print("Beasiswa jalur Tahfidz")
+        print("Nama penerima beasiswa \t: ", nama)
+        print("Jumlah hafalan Juz \t: ", hafalan_juz)
+        print("Mohon maaf", nama, "tidak mendapatkan beasiswa Tahfidz")
+        print("=" * 90)
 
-#Beasiswa Jalur Talenta
+#Beasiswa Jalur Youtube
 def beasiswa5():
-    print("==========================")
-    print("Beasiswa Jalur Talenta")
+    print("=" * 90)
+    print("Beasiswa Jalur Youtube")
+    print('')
+    nama = input("Masukkan nama penerima beasiswa : ")
+    jumlah_subscriber = int(input("Masukkan jumlah subscriber : "))
+    os.system('cls')
+    if (jumlah_subscriber < 3000):
+        print("=" * 90)
+        print("Beasiswa jalur Youtube")
+        print("Nama penerima beasiswa \t: ", nama)
+        print("Jumlah subscriber \t: ", jumlah_subscriber)
+        print("Mohon maaf", nama, "tidak mendapatkan beasiswa Youtube")
+        print("=" * 90)
+    else:
+        print("=" * 90)
+        print("Beasiswa jalur Youtube")
+        print("Nama penerima beasiswa \t: ", nama)
+        print("Jumlah subscriber \t: ", jumlah_subscriber)
+        print(nama, "berhak mendapatkan beasiswa Youtube")
+        print("=" * 90)
 
-#Beasiswa BIKOM
+#Beasiswa Jalur Media Sosial
 def beasiswa6():
-    print("==========================")
-    print("Beasiswa BIKOM")
-
+    print("=" * 90)
+    print("Beasiswa Jalur Media Sosial (TikTok, Instagram dll)")
+    print('')
+    nama = input("Masukkan nama penerima beasiswa : ")
+    jumlah_follower = int(input("Masukkan jumlah pengikut/follower : "))
+    os.system('cls')
+    if (jumlah_follower < 8000):
+        print("=" * 90)
+        print("Beasiswa jalur Media Sosial")
+        print("Nama penerima beasiswa \t: ", nama)
+        print("Jumlah follower \t: ", jumlah_follower)
+        print("Mohon maaf", nama, "tidak mendapatkan beasiswa Youtube")
+        print("=" * 90)
+    else:
+        print("=" * 90)
+        print("Beasiswa jalur Media Sosial")
+        print("Nama penerima beasiswa \t: ", nama)
+        print("Jumlah follower \t: ", jumlah_follower)
+        print(nama, "berhak mendapatkan beasiswa Youtube")
+        print("=" * 90)
 
 kondisi = True
 
@@ -127,9 +181,12 @@ while(kondisi == True):
     print('1. Beasiswa jalur Bidikmisi')
     print('2. Beasiswa jalur Prestasi')
     print('3. Beasiswa jalur SKTM')
-    print('4. Keluar')
+    print('4. Beasiswa jalur Tahfidz')
+    print('5. Beasiswa jalur Youtube')
+    print('6. Beasiswa jalur Media Sosial')
+    print('7. Keluar')
 
-    pilihan = int(input('Jenis beasiswa yang dipilih '))
+    pilihan = input('Jenis beasiswa yang dipilih ')
     os.system('cls')
     if pilihan == 1:
         beasiswa1()
@@ -138,9 +195,16 @@ while(kondisi == True):
     elif pilihan == 3:
         beasiswa3()
     elif pilihan == 4:
+        beasiswa4()
+    elif pilihan == 5:
+        beasiswa5()
+    elif pilihan == 6:
+        beasiswa6()
+    elif pilihan == 7:
         print("ROGER")
         print("Program diakhiri...")
         print("Sampai Jumpa Lagi :) ")
         kondisi = False
     else:
         print("Maaf input salah")
+        print("Gunakan input berupa angka")
