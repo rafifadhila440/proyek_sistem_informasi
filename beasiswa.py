@@ -186,7 +186,7 @@ while(kondisi == True):
     print('6. Beasiswa jalur Influencer Media Sosial')
     print('7. Keluar')
 
-    pilihan = input('Jenis beasiswa yang dipilih ')
+    pilihan = int(input('Jenis beasiswa yang dipilih '))
     os.system('cls')
     if pilihan == 1:
         beasiswa1()
