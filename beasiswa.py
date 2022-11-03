@@ -16,8 +16,9 @@ def beasiswa1():
     print("Masukkan jumlah anggota keluarga")
     print("Contoh: Banyaknya anggota keluarga adalah tiga orang maka masukkan \"3\"")
     jumlah_anggota_keluarga = int(input("Jumlah anggota keluarga : "))
+    total = penghasilan_ortu / jumlah_anggota_keluarga
     os.system('cls')
-    if (penghasilan_ortu/jumlah_anggota_keluarga) < 500000:
+    if (total < 1500000) :
         print("=" * 90)
         print("Beasiswa jalur Keterangan Kurang Mampu")
         print("Nama penerima beasiswa \t\t: ", nama)
@@ -43,23 +44,29 @@ def beasiswa2():
     print('')
     print("Masukkan nilai IPK")
     print("Contoh: IPK 3.00 masukkan \"3.00\"")
-    ipk = float(input("IPK : "))
+    ipkd1 = float(input("IPK D1 : "))
+    ipkd2 = float(input("IPK D2 : "))
+    ipkd3 = float(input("IPK D3 : "))
+    ipks1 = float(input("IPK S1 : "))
+    ipktotal = ipkd1 + ipkd2 + ipkd3 + ipks1
+    ipkrata = ipktotal / 4
+    format_ipkrata = "{:.2f}".format(ipkrata)
     os.system('cls')
-    if (ipk > 4.00 or ipk < 0.00):
-        print("Maaf input salah")
-    elif (ipk >= 3.50):
+    if (ipkrata > 4.00 or ipkrata < 0.00):
+        print("IPK terlalu besar")
+    elif (ipkrata >= 3.50):
         print("=" * 90)
-        print("Beasiswa jalur IPK")
+        print("Beasiswa jalur Prestasi")
         print("Nama penerima beasiswa \t: ", nama)
-        print("IPK \t\t\t: ", ipk)
-        print(nama, "berhak mendapatkan beasiswa Bidikmisi")
+        print("IPK rata-rata \t\t: ", ipkrata)
+        print(nama, "berhak mendapatkan beasiswa Prestasi")
         print("=" * 90)
     else:
         print("=" * 90)
-        print("Beasiswa jalur IPK")
+        print("Beasiswa jalur Prestasi")
         print("Nama penerima beasiswa \t: ", nama)
-        print("IPK \t\t\t: ", ipk)
-        print("Mohon maaf", nama, "tidak mendapatkan beasiswa Bidikmisi")
+        print("IPK rata-rata \t\t: ", ipkrata)
+        print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi")
         print("=" * 90)
 
 #Beasiswa Jalur SKTM
@@ -132,7 +139,7 @@ def beasiswa5():
     nama = input("Masukkan nama penerima beasiswa : ")
     jumlah_subscriber = int(input("Masukkan jumlah subscriber : "))
     os.system('cls')
-    if (jumlah_subscriber < 3000):
+    if (jumlah_subscriber < 5000):
         print("=" * 90)
         print("Beasiswa jalur Influencer Youtube")
         print("Nama penerima beasiswa \t: ", nama)
