@@ -20,7 +20,7 @@ def beasiswa1():
     os.system('cls')
     if (total < 1500000) :
         print("=" * 90)
-        print("Beasiswa jalur Keterangan Kurang Mampu")
+        print("Beasiswa jalur Bidikmisi")
         print("Nama penerima beasiswa \t\t: ", nama)
         print("Penghasilan Orang Tua/Wali \t: ", penghasilan_ortu)
         print("Jumlah anggota keluarga \t: ", jumlah_anggota_keluarga)
@@ -28,7 +28,7 @@ def beasiswa1():
         print("=" * 90)
     else:
         print("=" * 90)
-        print("Beasiswa jalur Keterangan Kurang Mampu")
+        print("Beasiswa jalur Bidikmisi")
         print("Nama penerima beasiswa \t\t: ", nama)
         print("Penghasilan Orang Tua/Wali \t: ", penghasilan_ortu)
         print("Jumlah anggota keluarga \t: ", jumlah_anggota_keluarga)
@@ -58,14 +58,14 @@ def beasiswa2():
         print("=" * 90)
         print("Beasiswa jalur Prestasi")
         print("Nama penerima beasiswa \t: ", nama)
-        print("IPK rata-rata \t\t: ", ipkrata)
+        print("IPK rata-rata \t\t: ", format_ipkrata)
         print(nama, "berhak mendapatkan beasiswa Prestasi")
         print("=" * 90)
     else:
         print("=" * 90)
         print("Beasiswa jalur Prestasi")
         print("Nama penerima beasiswa \t: ", nama)
-        print("IPK rata-rata \t\t: ", ipkrata)
+        print("IPK rata-rata \t\t: ", format_ipkrata)
         print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi")
         print("=" * 90)
 
