@@ -120,35 +120,37 @@ def beasiswa1():
 #Beasiswa Jalur Prestasi
 def beasiswa2():
     #print("=" * 90)
+    #Input Data Mhs
     print("Beasiswa jalur Prestasi")
     print('')
+    nim = int(input("Masukkan NIM penerima beasiswa : "))
     nama = input("Masukkan nama penerima beasiswa : ")
     print('')
+    
     print("Masukkan nilai IPK")
     print("Contoh: IPK 3.00 masukkan \"3.00\"")
     ipkd1 = float(input("IPK D1 : "))
     ipkd2 = float(input("IPK D2 : "))
     ipkd3 = float(input("IPK D3 : "))
-    ipks1 = float(input("IPK S1 : "))
     ipktotal = ipkd1 + ipkd2 + ipkd3
     ipkrata = ipktotal / 3
     format_ipkrata = "{:.2f}".format(ipkrata)
     #os.system('cls')
     if (ipkrata > 4.00 or ipkrata < 0.00):
         print("IPK terlalu besar")
-    elif (ipkrata >= 3.50):
+    elif (ipkrata >= 3.00):
         print("=" * 90)
         print("Beasiswa jalur Prestasi")
         print("Nama penerima beasiswa \t: ", nama)
         print("IPK rata-rata \t\t: ", format_ipkrata)
-        print(nama, "berhak mendapatkan beasiswa Prestasi")
+        print(nama, "berhak mendapatkan beasiswa nilai rata-rata")
         print("=" * 90)
     else:
         print("=" * 90)
         print("Beasiswa jalur Prestasi")
         print("Nama penerima beasiswa \t: ", nama)
         print("IPK rata-rata \t\t: ", format_ipkrata)
-        print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi")
+        print("Mohon maaf", nama, "tidak mendapatkan beasiswa nilai rata-rata")
         print("=" * 90)
 
 #Beasiswa Jalur Tahfidz
