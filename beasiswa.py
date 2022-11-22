@@ -7,6 +7,7 @@ def beasiswa1():
     #print("=" * 90)
     print("Beasiswa jalur Bidikmisi")
     print('')
+    nim = int(input("Masukkan NIM : "))
     nama = input("Masukkan nama penerima beasiswa : ")
     print('')
     print("Masukkan penghasilan orang tua/wali")
@@ -18,9 +19,11 @@ def beasiswa1():
     jumlah_anggota_keluarga = int(input("Jumlah anggota keluarga : "))
     total = penghasilan_ortu / jumlah_anggota_keluarga
     os.system('cls')
-    if (total < 1500000) :
+    if (total < 1500000):
         print("=" * 90)
-        print("Beasiswa jalur Bidikmisi")
+        print("=" * 90)
+        print("Beasiswa jalur Bidikmisi\n")
+        print("NIM \t\t\t\t: ", nim)
         print("Nama penerima beasiswa \t\t: ", nama)
         print("Penghasilan Orang Tua/Wali \t: ", penghasilan_ortu)
         print("Jumlah anggota keluarga \t: ", jumlah_anggota_keluarga)
@@ -28,7 +31,9 @@ def beasiswa1():
         print("=" * 90)
     else:
         print("=" * 90)
-        print("Beasiswa jalur Bidikmisi")
+        print("=" * 90)
+        print("Beasiswa jalur Bidikmisi\n")
+        print("NIM \t\t\t\t: ", nim)
         print("Nama penerima beasiswa \t\t: ", nama)
         print("Penghasilan Orang Tua/Wali \t: ", penghasilan_ortu)
         print("Jumlah anggota keluarga \t: ", jumlah_anggota_keluarga)
@@ -40,6 +45,7 @@ def beasiswa2():
     #print("=" * 90)
     print("Beasiswa jalur Prestasi")
     print('')
+    nim = int(input("Masukkan NIM : "))
     nama = input("Masukkan nama penerima beasiswa : ")
     print('')
     print("Masukkan nilai IPK")
@@ -54,9 +60,11 @@ def beasiswa2():
     os.system('cls')
     if (ipkrata > 4.00 or ipkrata < 0.00):
         print("IPK terlalu besar")
+        print("Silakan coba lagi")
     elif (ipkrata >= 3.50):
         print("=" * 90)
         print("Beasiswa jalur Prestasi")
+        print("NIM \t\t\t: ", nim)
         print("Nama penerima beasiswa \t: ", nama)
         print("IPK rata-rata \t\t: ", format_ipkrata)
         print(nama, "berhak mendapatkan beasiswa Prestasi")
@@ -64,6 +72,7 @@ def beasiswa2():
     else:
         print("=" * 90)
         print("Beasiswa jalur Prestasi")
+        print("NIM \t\t\t: ", nim)
         print("Nama penerima beasiswa \t: ", nama)
         print("IPK rata-rata \t\t: ", format_ipkrata)
         print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi")
@@ -84,7 +93,7 @@ def beasiswa3():
     if (ipk >= 3.50):
         if (sktm == "ada" or sktm == "y"):
             print("=" * 90)
-            print("Beasiswa jalur SKTM")
+            print("Beasiswa jalur SKTM\n")
             print("Nama penerima beasiswa \t: ", nama)
             print("IPK \t\t\t: ", ipk)
             print("SKTM \t\t\t: ", "Ada")
@@ -92,7 +101,7 @@ def beasiswa3():
             print("=" * 90)
         else:
             print("=" * 90)
-            print("Beasiswa jalur SKTM")
+            print("Beasiswa jalur SKTM\n")
             print("Nama penerima beasiswa \t: ", nama)
             print("IPK \t\t\t: ", ipk)
             print("SKTM \t\t\t: ", "Belum Ada")
@@ -100,7 +109,7 @@ def beasiswa3():
             print("=" * 90)
     else:
         print("=" * 90)
-        print("Beasiswa jalur SKTM")
+        print("Beasiswa jalur SKTM\n")
         print("Nama penerima beasiswa \t: ", nama)
         print("IPK \t\t\t: ", ipk)
         print("SKTM \t\t\t: ", "Belum Ada")
