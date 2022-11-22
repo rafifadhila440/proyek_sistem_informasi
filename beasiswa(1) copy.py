@@ -126,32 +126,111 @@ def beasiswa2():
     nim = int(input("Masukkan NIM penerima beasiswa : "))
     nama = input("Masukkan nama penerima beasiswa : ")
     print('')
-    
+
+    #Inpur IPK dan Prestasi
     print("Masukkan nilai IPK")
     print("Contoh: IPK 3.00 masukkan \"3.00\"")
     ipkd1 = float(input("IPK D1 : "))
+    while (ipkd1 > 4.00 or ipkd1 < 0.00):
+        print("Tidak ada IPK lebih dari 4.00 atau dibawah 0.00")
+        ipkd1 = float(input("IPK D1 : "))
     ipkd2 = float(input("IPK D2 : "))
+    while (ipkd2 > 4.00 or ipkd2 < 0.00):
+        print("Tidak ada IPK lebih dari 4.00 atau dibawah 0.00")
+        ipkd2 = float(input("IPK D2 : "))
     ipkd3 = float(input("IPK D3 : "))
+    while (ipkd3 > 4.00 or ipkd3 < 0.00):
+        print("Tidak ada IPK lebih dari 4.00 atau dibawah 0.00")
+        ipkd3 = float(input("IPK D3 : "))
     ipktotal = ipkd1 + ipkd2 + ipkd3
     ipkrata = ipktotal / 3
     format_ipkrata = "{:.2f}".format(ipkrata)
+
+    #List Bidang dan Tingkat Prestasi
+    list_bidang_pres = ["(1) Olahraga", "(2) Seni Rupa", "(3) Seni Tari", "(4) Drama/Sastra", "(5) Seni Suara/Musik", "(6) Olimpiade"]
+    list_tingkat_pres = ["(1) Kabupaten/Kota", "(2) Propinsi", "(3) Nasional", "(4) Internasional"]
+    print("\nPilih salah satu bidang prestasi")
+    print("1. Olahraga\n2. Seni Rupa\n3. Seni Tari\n4. Drama/Sastra\n5. Seni Suara/Musik\n6. Olimpiade")
+    print('')
+    bidang_pres = int(input("Masukkan salah satu bidang prestasi : "))
+    print("Pilih salah satu tingkatan prestasi yang didapat oleh Mahasiswa : ")
+    print("1. Kabupaten/Kota\n2. Propinsi\n3. Nasional\n4. Internasional")
+    print('')
+    tingkat_pres = int(input("Masukkan tingkat prestasi : "))
     #os.system('cls')
-    if (ipkrata > 4.00 or ipkrata < 0.00):
-        print("IPK terlalu besar")
-    elif (ipkrata >= 3.00):
-        print("=" * 90)
-        print("Beasiswa jalur Prestasi")
-        print("Nama penerima beasiswa \t: ", nama)
-        print("IPK rata-rata \t\t: ", format_ipkrata)
-        print(nama, "berhak mendapatkan beasiswa nilai rata-rata")
-        print("=" * 90)
-    else:
-        print("=" * 90)
-        print("Beasiswa jalur Prestasi")
-        print("Nama penerima beasiswa \t: ", nama)
-        print("IPK rata-rata \t\t: ", format_ipkrata)
-        print("Mohon maaf", nama, "tidak mendapatkan beasiswa nilai rata-rata")
-        print("=" * 90)
+    if tingkat_pres == 1:
+        tingkat_pres = list_tingkat_pres[0]
+    elif tingkat_pres == 2:
+        tingkat_pres = list_tingkat_pres[1]
+    elif tingkat_pres == 3:
+        tingkat_pres = list_tingkat_pres[2]
+    elif tingkat_pres == 4:
+        tingkat_pres = list_tingkat_pres[3]
+
+    if (tingkat_pres == "(1) Kabupaten/Kota"):
+        if (ipkrata >= 3.00):
+            print("=" * 90)
+            print("Beasiswa jalur Prestasi")
+            print("Nama penerima beasiswa \t: ", nama)
+            print("IPK rata-rata \t\t: ", format_ipkrata)
+            print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi")
+            print("=" * 90)
+        else:
+            print("=" * 90)
+            print("Beasiswa jalur Prestasi")
+            print("Nama penerima beasiswa \t: ", nama)
+            print("IPK rata-rata \t\t: ", format_ipkrata)
+            print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi")
+            print("=" * 90)
+
+    elif (tingkat_pres == "(2) Propinsi"):
+        if (ipkrata >= 3.00):
+            print("=" * 90)
+            print("Beasiswa jalur Prestasi")
+            print("Nama penerima beasiswa \t: ", nama)
+            print("IPK rata-rata \t\t: ", format_ipkrata)
+            print(nama, "berhak mendapatkan beasiswa nilai rata-rata")
+            print("=" * 90)
+        else:
+            print("=" * 90)
+            print("Beasiswa jalur Prestasi")
+            print("Nama penerima beasiswa \t: ", nama)
+            print("IPK rata-rata \t\t: ", format_ipkrata)
+            print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi, minimal ipk 3.00")
+            print("=" * 90)
+
+    elif (tingkat_pres == "(3) Propinsi"):
+        if (ipkrata >= 3.00):
+            print("=" * 90)
+            print("Beasiswa jalur Prestasi")
+            print("Nama penerima beasiswa \t: ", nama)
+            print("IPK rata-rata \t\t: ", format_ipkrata)
+            print(nama, "berhak mendapatkan beasiswa nilai rata-rata")
+            print("=" * 90)
+        else:
+            print("=" * 90)
+            print("Beasiswa jalur Prestasi")
+            print("Nama penerima beasiswa \t: ", nama)
+            print("IPK rata-rata \t\t: ", format_ipkrata)
+            print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi, minimal ipk 3.00")
+            print("=" * 90)
+
+    elif (tingkat_pres == "(4) Internasional"):
+        if (ipkrata >= 3.00):
+            print("=" * 90)
+            print("Beasiswa jalur Prestasi")
+            print("Nama penerima beasiswa \t: ", nama)
+            print("IPK rata-rata \t\t: ", format_ipkrata)
+            print(nama, "berhak mendapatkan beasiswa nilai rata-rata")
+            print("=" * 90)
+        else:
+            print("=" * 90)
+            print("Beasiswa jalur Prestasi")
+            print("Nama penerima beasiswa \t: ", nama)
+            print("IPK rata-rata \t\t: ", format_ipkrata)
+            print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi, minimal ipk 3.00")
+            print("=" * 90)
+    
 
 #Beasiswa Jalur Tahfidz
 def beasiswa3():
