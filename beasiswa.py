@@ -1,5 +1,6 @@
 #Proyek Dasar Pemrograman Aplikasi Beasiswa
 #Kelompok 3
+#Beasiswa Ver 1.0
 
 #Beasiswa Jalur Bidikmisi
 import os
