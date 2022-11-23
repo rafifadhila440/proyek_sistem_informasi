@@ -72,7 +72,6 @@ def beasiswa1():
             print("Jumlah anggota keluarga \t: ", jumlah_anggota_keluarga)
             print("SKTM \t\t\t\t: ", sktm)
             print("Mohon maaf", nama, "tidak mendapatkan beasiswa karena belum ada surat SKTM.")
-            print("Silakan coba lagi")
             print("=" * 90)
             opsi = input("Tekan Y untuk kembali ke menu :")
             os.system('cls')
@@ -92,7 +91,6 @@ def beasiswa1():
             print("Jumlah anggota keluarga \t: ", jumlah_anggota_keluarga)
             print("SKTM \t\t\t\t: ", sktm)
             print("Mohon maaf", nama, "tidak mendapatkan beasiswa karena penghasilan diatas kriteria.")
-            print("Silakan coba lagi")
             print("=" * 90)
             opsi = input("Tekan Y untuk kembali ke menu :")
             os.system('cls')
@@ -111,7 +109,6 @@ def beasiswa1():
             print("Jumlah anggota keluarga \t: ", jumlah_anggota_keluarga)
             print("SKTM \t\t\t\t: ", sktm)
             print("Mohon maaf", nama, "tidak mendapatkan beasiswa karena penghasilan diatas kriteria dan belum ada surat SKTM.")
-            print("Silakan coba lagi")
             print("=" * 90)
             opsi = input("Tekan Y untuk kembali ke menu :")
             os.system('cls')
@@ -126,6 +123,18 @@ def beasiswa2():
     print('')
     nim = int(input("Masukkan NIM penerima beasiswa : "))
     nama = input("Masukkan nama penerima beasiswa : ")
+    print('')
+
+    #Input Fakultas
+    print("Masukkan asal Fakultas Kampus Mantap")
+    print("Contoh: Jika asal dari Fakultas Teknik Dan Informatika, masukkan \"Teknik dan Informatika\"")
+    fakultas = input("Fakultas : ")
+    print('')
+    
+    #Input Prodi
+    print("Masukkan Prodi Fakultas Kampus Mantap")
+    print("Contoh: Jika prodi Teknik Informatika, masukkan \"Teknik Informasika\"")
+    prodi = input("Prodi : ")
     print('')
 
     #Inpur IPK dan Prestasi
@@ -159,6 +168,22 @@ def beasiswa2():
     print('')
     tingkat_pres = int(input("Masukkan tingkat prestasi : "))
     #os.system('cls')
+
+    #Bidang Prestasi
+    if bidang_pres == 1:
+        bidang_pres = list_bidang_pres[0]
+    elif bidang_pres == 2:
+        bidang_pres = list_bidang_pres[1]
+    elif bidang_pres == 3:
+        bidang_pres = list_bidang_pres[2]
+    elif bidang_pres == 4:
+        bidang_pres = list_bidang_pres[3]
+    elif bidang_pres == 5:
+        bidang_pres = list_bidang_pres[4]
+    elif bidang_pres == 6:
+        bidang_pres = list_bidang_pres[5]
+
+    #Tingkat Prestasi    
     if tingkat_pres == 1:
         tingkat_pres = list_tingkat_pres[0]
     elif tingkat_pres == 2:
@@ -168,164 +193,146 @@ def beasiswa2():
     elif tingkat_pres == 4:
         tingkat_pres = list_tingkat_pres[3]
 
+    #Penentu
     if (tingkat_pres == "(1) Kabupaten/Kota"):
         if (ipkrata >= 3.00):
             print("=" * 90)
-            print("Beasiswa jalur Prestasi")
+            print("Beasiswa jalur Prestasi\n")
+            print("Nim penerima beasiswa \t: ", nim)
             print("Nama penerima beasiswa \t: ", nama)
+            print("Asal Fakultas \t\t: ", fakultas)
+            print("Prodi Fakultas \t\t: ", prodi)
             print("IPK rata-rata \t\t: ", format_ipkrata)
-            print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi")
+            print("Bidang Prestasi \t: ", bidang_pres)
+            print("Tingkat Prestasi \t: ", tingkat_pres)
+            print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi, minimal Tingkat Prestasi Propinsi")
             print("=" * 90)
+            opsi = input("Tekan Y untuk kembali ke menu :")
+            os.system('cls')
+            if (opsi == "y" or opsi == "Y"):
+                kondisi == True
+
         else:
             print("=" * 90)
-            print("Beasiswa jalur Prestasi")
+            print("Beasiswa jalur Prestasi\n")
+            print("Nim penerima beasiswa \t: ", nim)
             print("Nama penerima beasiswa \t: ", nama)
+            print("Asal Fakultas \t\t: ", fakultas)
+            print("Prodi Fakultas \t\t: ", prodi)
             print("IPK rata-rata \t\t: ", format_ipkrata)
-            print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi")
+            print("Bidang Prestasi \t: ", bidang_pres)
+            print("Tingkat Prestasi \t: ", tingkat_pres)
+            print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi, minimal ipk rata-rata 3.00 dan Tingkat Prestasi Propinsi")
             print("=" * 90)
+            opsi = input("Tekan Y untuk kembali ke menu :")
+            os.system('cls')
+            if (opsi == "y" or opsi == "Y"):
+                kondisi == True
 
     elif (tingkat_pres == "(2) Propinsi"):
         if (ipkrata >= 3.00):
             print("=" * 90)
-            print("Beasiswa jalur Prestasi")
+            print("Beasiswa jalur Prestasi\n")
+            print("Nim penerima beasiswa \t: ", nim)
             print("Nama penerima beasiswa \t: ", nama)
+            print("Asal Fakultas \t\t: ", fakultas)
+            print("Prodi Fakultas \t\t: ", prodi)
             print("IPK rata-rata \t\t: ", format_ipkrata)
+            print("Bidang Prestasi \t: ", bidang_pres)
+            print("Tingkat Prestasi \t: ", tingkat_pres)
             print(nama, "berhak mendapatkan beasiswa nilai rata-rata")
             print("=" * 90)
+            opsi = input("Tekan Y untuk kembali ke menu :")
+            os.system('cls')
+            if (opsi == "y" or opsi == "Y"):
+                kondisi == True
+
         else:
             print("=" * 90)
-            print("Beasiswa jalur Prestasi")
+            print("Beasiswa jalur Prestasi\n")
+            print("Nim penerima beasiswa \t: ", nim)
             print("Nama penerima beasiswa \t: ", nama)
+            print("Asal Fakultas \t\t: ", fakultas)
+            print("Prodi Fakultas \t\t: ", prodi)
             print("IPK rata-rata \t\t: ", format_ipkrata)
+            print("Bidang Prestasi \t: ", bidang_pres)
+            print("Tingkat Prestasi \t: ", tingkat_pres)
             print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi, minimal ipk 3.00")
             print("=" * 90)
+            opsi = input("Tekan Y untuk kembali ke menu :")
+            os.system('cls')
+            if (opsi == "y" or opsi == "Y"):
+                kondisi == True
 
-    elif (tingkat_pres == "(3) Propinsi"):
+    elif (tingkat_pres == "(3) Nasional"):
         if (ipkrata >= 3.00):
             print("=" * 90)
-            print("Beasiswa jalur Prestasi")
+            print("Beasiswa jalur Prestasi\n")
+            print("Nim penerima beasiswa \t: ", nim)
             print("Nama penerima beasiswa \t: ", nama)
+            print("Asal Fakultas \t\t: ", fakultas)
+            print("Prodi Fakultas \t\t: ", prodi)
             print("IPK rata-rata \t\t: ", format_ipkrata)
-            print(nama, "berhak mendapatkan beasiswa nilai rata-rata")
+            print("Bidang Prestasi \t: ", bidang_pres)
+            print("Tingkat Prestasi \t: ", tingkat_pres)
+            print(nama, "berhak mendapatkan beasiswa Prestasi")
             print("=" * 90)
+            opsi = input("Tekan Y untuk kembali ke menu :")
+            os.system('cls')
+            if (opsi == "y" or opsi == "Y"):
+                kondisi == True
+
         else:
             print("=" * 90)
-            print("Beasiswa jalur Prestasi")
+            print("Beasiswa jalur Prestasi\n")
+            print("Nim penerima beasiswa \t: ", nim)
             print("Nama penerima beasiswa \t: ", nama)
+            print("Asal Fakultas \t\t: ", fakultas)
+            print("Prodi Fakultas \t\t: ", prodi)
             print("IPK rata-rata \t\t: ", format_ipkrata)
+            print("Bidang Prestasi \t: ", bidang_pres)
+            print("Tingkat Prestasi \t: ", tingkat_pres)
             print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi, minimal ipk 3.00")
             print("=" * 90)
+            opsi = input("Tekan Y untuk kembali ke menu :")
+            os.system('cls')
+            if (opsi == "y" or opsi == "Y"):
+                kondisi == True
 
     elif (tingkat_pres == "(4) Internasional"):
         if (ipkrata >= 3.00):
             print("=" * 90)
-            print("Beasiswa jalur Prestasi")
+            print("Beasiswa jalur Prestasi\n")
+            print("Nim penerima beasiswa \t: ", nim)
             print("Nama penerima beasiswa \t: ", nama)
+            print("Asal Fakultas \t\t: ", fakultas)
+            print("Prodi Fakultas \t\t: ", prodi)
             print("IPK rata-rata \t\t: ", format_ipkrata)
-            print(nama, "berhak mendapatkan beasiswa nilai rata-rata")
+            print("Bidang Prestasi \t: ", bidang_pres)
+            print("Tingkat Prestasi \t: ", tingkat_pres)
+            print(nama, "berhak mendapatkan beasiswa Prestasi")
             print("=" * 90)
+            opsi = input("Tekan Y untuk kembali ke menu :")
+            os.system('cls')
+            if (opsi == "y" or opsi == "Y"):
+                kondisi == True
+
         else:
             print("=" * 90)
-            print("Beasiswa jalur Prestasi")
+            print("Beasiswa jalur Prestasi\n")
+            print("Nim penerima beasiswa \t: ", nim)
             print("Nama penerima beasiswa \t: ", nama)
+            print("Asal Fakultas \t\t: ", fakultas)
+            print("Prodi Fakultas \t\t: ", prodi)
             print("IPK rata-rata \t\t: ", format_ipkrata)
+            print("Bidang Prestasi \t: ", bidang_pres)
+            print("Tingkat Prestasi \t: ", tingkat_pres)
             print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi, minimal ipk 3.00")
             print("=" * 90)
-    
-
-#Beasiswa Jalur Tahfidz
-def beasiswa3():
-    #print("=" * 90)
-    #Input Data Mhs
-    print("Beasiswa jalur Tahfidz")
-    print('')
-    nim = int(input("Masukkan NIM penerima beasiswa : "))
-    nama = input("Masukkan nama penerima beasiswa : ")
-    print('')
-
-    #Input Fakultas
-    print("Masukkan asal Fakultas Kampus Mantap")
-    print("Contoh: Jika asal dari Fakultas Teknik Dan Informatika, masukkan \"Teknik dan Informatika\"")
-    fakultas = input("Fakultas : ")
-    print('')
-
-    #Input Prodi
-    print("Masukkan Prodi Fakultas Kampus Mantap")
-    print("Contoh: Jika prodi Teknik Informatika, masukkan \"Teknik Informasika\"")
-    prodi = input("Prodi : ")
-    print('')
-
-    #Input jumlah hafalan
-    print("Masukkan jumlah hafalan Juz\nMinimal 10 Juz")
-    hafalan_juz = int(input("Jumlah hafalan Juz : "))
-    print('')
-    #os.system('cls')
-    if (hafalan_juz >= 10):
-        print("=" * 90)
-        print("Beasiswa jalur Tahfidz")
-        print("Nim penerima beasiswa \t: ", nim)
-        print("Nama penerima beasiswa \t: ", nama)
-        print("Asal Fakultas \t\t: ", fakultas)
-        print("Prodi Fakultas \t\t: ", prodi)
-        print("Jumlah hafalan Juz \t: ", hafalan_juz)
-        print(nama, "berhak mendapatkan beasiswa Tahfidz")
-        print("=" * 90)
-    else:
-        print("=" * 90)
-        print("Beasiswa jalur Tahfidz")
-        print("Nim penerima beasiswa \t: ", nim)
-        print("Nama penerima beasiswa \t: ", nama)
-        print("Asal Fakultas \t\t: ", fakultas)
-        print("Prodi Fakultas \t\t: ", prodi)
-        print("Jumlah hafalan Juz \t: ", hafalan_juz)
-        print("Mohon maaf", nama, "tidak mendapatkan beasiswa Tahfidz.\nMinimal hafalan 10 Juz.")
-        print("=" * 90)
-
-#Beasiswa Jalur Influencer Youtube
-def beasiswa4():
-    print("=" * 90)
-    print("Beasiswa Jalur Influencer Youtube")
-    print('')
-    nama = input("Masukkan nama penerima beasiswa : ")
-    jumlah_subscriber = int(input("Masukkan jumlah subscriber : "))
-    #os.system('cls')
-    if (jumlah_subscriber < 5000):
-        print("=" * 90)
-        print("Beasiswa jalur Influencer Youtube")
-        print("Nama penerima beasiswa \t: ", nama)
-        print("Jumlah subscriber \t: ", jumlah_subscriber)
-        print("Mohon maaf", nama, "tidak mendapatkan beasiswa Influencer Youtube")
-        print("=" * 90)
-    else:
-        print("=" * 90)
-        print("Beasiswa jalur Influencer Youtube")
-        print("Nama penerima beasiswa \t: ", nama)
-        print("Jumlah subscriber \t: ", jumlah_subscriber)
-        print(nama, "berhak mendapatkan beasiswa Influencer Youtube")
-        print("=" * 90)
-
-#Beasiswa Jalur Influencer Media Sosial
-def beasiswa5():
-    print("=" * 90)
-    print("Beasiswa Jalur Influencer Media Sosial (TikTok, Instagram dll)")
-    print('')
-    nama = input("Masukkan nama penerima beasiswa : ")
-    jumlah_follower = int(input("Masukkan jumlah pengikut/follower : "))
-    #os.system('cls')
-    if (jumlah_follower < 8000):
-        print("=" * 90)
-        print("Beasiswa jalur Influencer Media Sosial")
-        print("Nama penerima beasiswa \t: ", nama)
-        print("Jumlah follower \t: ", jumlah_follower)
-        print("Mohon maaf", nama, "tidak mendapatkan beasiswa Influencer Media Sosial")
-        print("=" * 90)
-    else:
-        print("=" * 90)
-        print("Beasiswa jalur Influencer Media Sosial")
-        print("Nama penerima beasiswa \t: ", nama)
-        print("Jumlah follower \t: ", jumlah_follower)
-        print(nama, "berhak mendapatkan beasiswa Influencer Media Sosial")
-        print("=" * 90)
+            opsi = input("Tekan Y untuk kembali ke menu :")
+            os.system('cls')
+            if (opsi == "y" or opsi == "Y"):
+                kondisi == True
 
 kondisi = True
 #Menu pilihan program
@@ -336,10 +343,7 @@ while(kondisi == True):
     print('Pilih kategori beasiswa')
     print('1. Beasiswa jalur Keterangan Kurang Mampu')
     print('2. Beasiswa jalur Prestasi')
-    print('3. Beasiswa jalur Tahfidz')
-    print('4. Beasiswa jalur Influencer Youtube')
-    print('5. Beasiswa jalur Influencer Media Sosial')
-    print('6. Keluar')
+    print('3. Keluar')
 
     pilihan = int(input('Jenis beasiswa yang dipilih '))
     os.system('cls')
@@ -348,12 +352,6 @@ while(kondisi == True):
     elif pilihan == 2:
         beasiswa2()
     elif pilihan == 3:
-        beasiswa3()
-    elif pilihan == 4:
-        beasiswa4()
-    elif pilihan == 5:
-        beasiswa5()
-    elif pilihan == 6:
         print("ROGER")
         print("Program diakhiri...")
         print("Sampai Jumpa Lagi :) ")
