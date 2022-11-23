@@ -55,10 +55,8 @@ def beasiswa1():
             print("SKTM \t\t\t\t: ", sktm)
             print(nama, "berhak mendapatkan beasiswa")
             print("=" * 90)
-            opsi = input("Tekan Y untuk kembali ke menu :")
+            tombol_apa_saja = input("Masukkan huruf atau angka apa saja untuk kembali ke menu: ")
             os.system('cls')
-            if (opsi == "y" or opsi == "Y"):
-                kondisi == True
 
         elif (sktm == "n" or sktm == "N"):
             sktm = "Belum Ada"
@@ -73,10 +71,8 @@ def beasiswa1():
             print("SKTM \t\t\t\t: ", sktm)
             print("Mohon maaf", nama, "tidak mendapatkan beasiswa karena belum ada surat SKTM.")
             print("=" * 90)
-            opsi = input("Tekan Y untuk kembali ke menu :")
+            tombol_apa_saja = input("Masukkan huruf atau angka apa saja untuk kembali ke menu: ")
             os.system('cls')
-            if (opsi == "y" or opsi == "Y"):
-                kondisi == True
 
     elif (total >= 1500000):
         if (sktm == "y" or sktm == "Y"):
@@ -92,10 +88,8 @@ def beasiswa1():
             print("SKTM \t\t\t\t: ", sktm)
             print("Mohon maaf", nama, "tidak mendapatkan beasiswa karena penghasilan diatas kriteria.")
             print("=" * 90)
-            opsi = input("Tekan Y untuk kembali ke menu :")
+            tombol_apa_saja = input("Masukkan huruf atau angka apa saja untuk kembali ke menu: ")
             os.system('cls')
-            if (opsi == "y" or opsi == "Y"):
-                kondisi == True
 
         elif (sktm == "n" or sktm == "N"):
             sktm = "Belum Ada"
@@ -110,10 +104,8 @@ def beasiswa1():
             print("SKTM \t\t\t\t: ", sktm)
             print("Mohon maaf", nama, "tidak mendapatkan beasiswa karena penghasilan diatas kriteria dan belum ada surat SKTM.")
             print("=" * 90)
-            opsi = input("Tekan Y untuk kembali ke menu :")
+            tombol_apa_saja = input("Masukkan huruf atau angka apa saja untuk kembali ke menu: ")
             os.system('cls')
-            if (opsi == "y" or opsi == "Y"):
-                kondisi == True
 
 #Beasiswa Jalur Prestasi
 def beasiswa2():
@@ -207,10 +199,8 @@ def beasiswa2():
             print("Tingkat Prestasi \t: ", tingkat_pres)
             print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi, minimal Tingkat Prestasi Propinsi")
             print("=" * 90)
-            opsi = input("Tekan Y untuk kembali ke menu :")
+            tombol_apa_saja = input("Masukkan huruf atau angka apa saja untuk kembali ke menu: ")
             os.system('cls')
-            if (opsi == "y" or opsi == "Y"):
-                kondisi == True
 
         else:
             print("=" * 90)
@@ -224,10 +214,8 @@ def beasiswa2():
             print("Tingkat Prestasi \t: ", tingkat_pres)
             print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi, minimal ipk rata-rata 3.00 dan Tingkat Prestasi Propinsi")
             print("=" * 90)
-            opsi = input("Tekan Y untuk kembali ke menu :")
+            tombol_apa_saja = input("Masukkan huruf atau angka apa saja untuk kembali ke menu: ")
             os.system('cls')
-            if (opsi == "y" or opsi == "Y"):
-                kondisi == True
 
     elif (tingkat_pres == "(2) Propinsi"):
         if (ipkrata >= 3.00):
@@ -242,10 +230,8 @@ def beasiswa2():
             print("Tingkat Prestasi \t: ", tingkat_pres)
             print(nama, "berhak mendapatkan beasiswa nilai rata-rata")
             print("=" * 90)
-            opsi = input("Tekan Y untuk kembali ke menu :")
+            tombol_apa_saja = input("Masukkan huruf atau angka apa saja untuk kembali ke menu: ")
             os.system('cls')
-            if (opsi == "y" or opsi == "Y"):
-                kondisi == True
 
         else:
             print("=" * 90)
@@ -259,10 +245,8 @@ def beasiswa2():
             print("Tingkat Prestasi \t: ", tingkat_pres)
             print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi, minimal ipk 3.00")
             print("=" * 90)
-            opsi = input("Tekan Y untuk kembali ke menu :")
+            tombol_apa_saja = input("Masukkan huruf atau angka apa saja untuk kembali ke menu: ")
             os.system('cls')
-            if (opsi == "y" or opsi == "Y"):
-                kondisi == True
 
     elif (tingkat_pres == "(3) Nasional"):
         if (ipkrata >= 3.00):
@@ -277,10 +261,8 @@ def beasiswa2():
             print("Tingkat Prestasi \t: ", tingkat_pres)
             print(nama, "berhak mendapatkan beasiswa Prestasi")
             print("=" * 90)
-            opsi = input("Tekan Y untuk kembali ke menu :")
+            tombol_apa_saja = input("Masukkan huruf atau angka apa saja untuk kembali ke menu: ")
             os.system('cls')
-            if (opsi == "y" or opsi == "Y"):
-                kondisi == True
 
         else:
             print("=" * 90)
@@ -294,10 +276,8 @@ def beasiswa2():
             print("Tingkat Prestasi \t: ", tingkat_pres)
             print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi, minimal ipk 3.00")
             print("=" * 90)
-            opsi = input("Tekan Y untuk kembali ke menu :")
+            tombol_apa_saja = input("Masukkan huruf atau angka apa saja untuk kembali ke menu: ")
             os.system('cls')
-            if (opsi == "y" or opsi == "Y"):
-                kondisi == True
 
     elif (tingkat_pres == "(4) Internasional"):
         if (ipkrata >= 3.00):
@@ -312,10 +292,8 @@ def beasiswa2():
             print("Tingkat Prestasi \t: ", tingkat_pres)
             print(nama, "berhak mendapatkan beasiswa Prestasi")
             print("=" * 90)
-            opsi = input("Tekan Y untuk kembali ke menu :")
+            tombol_apa_saja = input("Masukkan huruf atau angka apa saja untuk kembali ke menu: ")
             os.system('cls')
-            if (opsi == "y" or opsi == "Y"):
-                kondisi == True
 
         else:
             print("=" * 90)
@@ -329,10 +307,8 @@ def beasiswa2():
             print("Tingkat Prestasi \t: ", tingkat_pres)
             print("Mohon maaf", nama, "tidak mendapatkan beasiswa Prestasi, minimal ipk 3.00")
             print("=" * 90)
-            opsi = input("Tekan Y untuk kembali ke menu :")
+            tombol_apa_saja = input("Masukkan huruf atau angka apa saja untuk kembali ke menu: ")
             os.system('cls')
-            if (opsi == "y" or opsi == "Y"):
-                kondisi == True
 
 kondisi = True
 #Menu pilihan program
