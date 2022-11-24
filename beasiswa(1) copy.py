@@ -313,7 +313,7 @@ kondisi = True
 #Menu pilihan program
 while(kondisi == True):
     print('')
-    print("Program Penentuan Beasiswa")
+    print("Program Kelayakan Beasiswa Kampus Mantap")
     print("=" * 90)
     print('Pilih kategori beasiswa')
     print('1. Beasiswa jalur Keterangan Kurang Mampu')
