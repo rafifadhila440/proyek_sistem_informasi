@@ -155,12 +155,6 @@ def beasiswa2():
     print("1. Olahraga\n2. Seni Rupa\n3. Seni Tari\n4. Drama/Sastra\n5. Seni Suara/Musik\n6. Olimpiade")
     print('')
     bidang_pres = int(input("Masukkan salah satu bidang prestasi : "))
-    print("Pilih salah satu tingkatan prestasi yang didapat oleh Mahasiswa : ")
-    print("1. Kabupaten/Kota\n2. Propinsi\n3. Nasional\n4. Internasional")
-    print('')
-    tingkat_pres = int(input("Masukkan tingkat prestasi : "))
-    #os.system('cls')
-
     #Bidang Prestasi
     if bidang_pres == 1:
         bidang_pres = list_bidang_pres[0]
@@ -175,6 +169,10 @@ def beasiswa2():
     elif bidang_pres == 6:
         bidang_pres = list_bidang_pres[5]
 
+    print("Pilih salah satu tingkatan prestasi yang didapat oleh Mahasiswa : ")
+    print("1. Kabupaten/Kota\n2. Propinsi\n3. Nasional\n4. Internasional")
+    print('')
+    tingkat_pres = int(input("Masukkan tingkat prestasi : "))
     #Tingkat Prestasi    
     if tingkat_pres == 1:
         tingkat_pres = list_tingkat_pres[0]
@@ -184,6 +182,7 @@ def beasiswa2():
         tingkat_pres = list_tingkat_pres[2]
     elif tingkat_pres == 4:
         tingkat_pres = list_tingkat_pres[3]
+    #os.system('cls')
 
     #Penentu
     if (tingkat_pres == "(1) Kabupaten/Kota"):
@@ -228,7 +227,7 @@ def beasiswa2():
             print("IPK rata-rata \t\t: ", format_ipkrata)
             print("Bidang Prestasi \t: ", bidang_pres)
             print("Tingkat Prestasi \t: ", tingkat_pres)
-            print(nama, "berhak mendapatkan beasiswa nilai rata-rata")
+            print(nama, "berhak mendapatkan beasiswa Prestasi")
             print("=" * 90)
             tombol_apa_saja = input("Masukkan huruf atau angka apa saja untuk kembali ke menu: ")
             os.system('cls')
