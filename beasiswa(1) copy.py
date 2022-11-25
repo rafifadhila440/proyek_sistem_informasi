@@ -129,7 +129,7 @@ def beasiswa2():
     prodi = input("Prodi : ")
     print('')
 
-    #Inpur IPK dan Prestasi
+    #Input IPK dan Prestasi
     print("Masukkan nilai IPK")
     print("Contoh: IPK 3.00 masukkan \"3.00\"")
     ipkd1 = float(input("IPK D1 : "))
@@ -144,6 +144,8 @@ def beasiswa2():
     while (ipkd3 > 4.00 or ipkd3 < 0.00):
         print("Tidak ada IPK lebih dari 4.00 atau dibawah 0.00")
         ipkd3 = float(input("IPK D3 : "))
+    
+    #Proses
     ipktotal = ipkd1 + ipkd2 + ipkd3
     ipkrata = ipktotal / 3
     format_ipkrata = "{:.2f}".format(ipkrata)
