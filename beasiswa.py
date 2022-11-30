@@ -175,6 +175,9 @@ def beasiswa2():
     print("1. Kabupaten/Kota\n2. Propinsi\n3. Nasional\n4. Internasional")
     print('')
     tingkat_pres = int(input("Masukkan tingkat prestasi : "))
+    while tingkat_pres not in 1234:
+        print("Maaf input salah, masukkan angka untuk memilih tingkat prestasi")
+        tingkat_pres = int(input("Masukkan tingkat prestasi : "))
     #Tingkat Prestasi    
     if tingkat_pres == 1:
         tingkat_pres = list_tingkat_pres[0]
