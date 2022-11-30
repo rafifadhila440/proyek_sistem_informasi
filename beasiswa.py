@@ -151,12 +151,12 @@ def beasiswa2():
     format_ipkrata = "{:.2f}".format(ipkrata)
 
     #List Bidang dan Tingkat Prestasi
-    list_bidang_pres = ["(1) Olahraga", "(2) Seni Rupa", "(3) Seni Tari", "(4) Drama/Sastra", "(5) Seni Suara/Musik", "(6) Olimpiade"]
-    list_tingkat_pres = ["(1) Kabupaten/Kota", "(2) Propinsi", "(3) Nasional", "(4) Internasional"]
+    list_bidang_pres = ["Olahraga", "Seni Rupa", "Seni Tari", "Drama/Sastra", "Seni Suara/Musik", "Olimpiade"]
+    list_tingkat_pres = ["Kabupaten/Kota", "Propinsi", "Nasional", "Internasional"]
     print("\nPilih salah satu bidang prestasi")
     print("1. Olahraga\n2. Seni Rupa\n3. Seni Tari\n4. Drama/Sastra\n5. Seni Suara/Musik\n6. Olimpiade")
     print('')
-    bidang_pres = int(input("Masukkan salah satu bidang prestasi : "))
+    bidang_pres = int(input("Masukkan angka untuk salah satu bidang prestasi : "))
     #Bidang Prestasi
     if bidang_pres == 1:
         bidang_pres = list_bidang_pres[0]
@@ -174,10 +174,8 @@ def beasiswa2():
     print("Pilih salah satu tingkatan prestasi yang didapat oleh Mahasiswa : ")
     print("1. Kabupaten/Kota\n2. Propinsi\n3. Nasional\n4. Internasional")
     print('')
-    tingkat_pres = int(input("Masukkan tingkat prestasi : "))
-    while tingkat_pres not in 1234:
-        print("Maaf input salah, masukkan angka untuk memilih tingkat prestasi")
-        tingkat_pres = int(input("Masukkan tingkat prestasi : "))
+    tingkat_pres = int(input("Masukkan angka untuk salah satu tingkat prestasi : "))
+
     #Tingkat Prestasi    
     if tingkat_pres == 1:
         tingkat_pres = list_tingkat_pres[0]
@@ -190,7 +188,7 @@ def beasiswa2():
     #os.system('cls')
 
     #Penentu
-    if (tingkat_pres == "(1) Kabupaten/Kota"):
+    if (tingkat_pres == "Kabupaten/Kota"):
         if (ipkrata >= 3.00):
             print("=" * 90)
             print("Beasiswa jalur Prestasi\n")
@@ -221,7 +219,7 @@ def beasiswa2():
             tombol_apa_saja = input("Masukkan huruf atau angka apa saja untuk kembali ke menu: ")
             os.system('cls')
 
-    elif (tingkat_pres == "(2) Propinsi"):
+    elif (tingkat_pres == "Propinsi"):
         if (ipkrata >= 3.00):
             print("=" * 90)
             print("Beasiswa jalur Prestasi\n")
@@ -252,7 +250,7 @@ def beasiswa2():
             tombol_apa_saja = input("Masukkan huruf atau angka apa saja untuk kembali ke menu: ")
             os.system('cls')
 
-    elif (tingkat_pres == "(3) Nasional"):
+    elif (tingkat_pres == "Nasional"):
         if (ipkrata >= 3.00):
             print("=" * 90)
             print("Beasiswa jalur Prestasi\n")
@@ -283,7 +281,7 @@ def beasiswa2():
             tombol_apa_saja = input("Masukkan huruf atau angka apa saja untuk kembali ke menu: ")
             os.system('cls')
 
-    elif (tingkat_pres == "(4) Internasional"):
+    elif (tingkat_pres == "Internasional"):
         if (ipkrata >= 3.00):
             print("=" * 90)
             print("Beasiswa jalur Prestasi\n")
