@@ -145,7 +145,7 @@ def beasiswa2():
         print("Tidak ada IPK lebih dari 4.00 atau dibawah 0.00")
         ipkd3 = float(input("IPK D3 : "))
     
-    #Proses
+    #Proses untuk ipk rata - rata
     ipktotal = ipkd1 + ipkd2 + ipkd3
     ipkrata = ipktotal / 3
     format_ipkrata = "{:.2f}".format(ipkrata)
@@ -153,10 +153,23 @@ def beasiswa2():
     #List Bidang dan Tingkat Prestasi
     list_bidang_pres = ["Olahraga", "Seni Rupa", "Seni Tari", "Drama/Sastra", "Seni Suara/Musik", "Olimpiade"]
     list_tingkat_pres = ["Kabupaten/Kota", "Propinsi", "Nasional", "Internasional"]
+
+    #Input Bidang Prestasi
     print("\nPilih salah satu bidang prestasi")
     print("1. Olahraga\n2. Seni Rupa\n3. Seni Tari\n4. Drama/Sastra\n5. Seni Suara/Musik\n6. Olimpiade")
     print('')
-    bidang_pres = int(input("Masukkan angka untuk salah satu bidang prestasi : "))
+    #Input dan validasi Bidang Prestasi
+    while True:
+      try:
+        #Meminta user memasukkan angka untuk salah satu bidang prestasi
+        bidang_pres = int(input("Masukkan angka untuk salah satu bidang prestasi : "))
+        if bidang_pres >= 1 and bidang_pres <= 6:
+          break
+        else:
+          print("Maaf input salah, input yang dimasukkan harus salah satu angka dari 1-6.")
+      except ValueError:
+        print("Maaf input salah, input yang dimasukkan harus angka.")
+
     #Bidang Prestasi
     if bidang_pres == 1:
         bidang_pres = list_bidang_pres[0]
@@ -171,10 +184,21 @@ def beasiswa2():
     elif bidang_pres == 6:
         bidang_pres = list_bidang_pres[5]
 
+    #Input Tingkat Prestasi
     print("Pilih salah satu tingkatan prestasi yang didapat oleh Mahasiswa : ")
     print("1. Kabupaten/Kota\n2. Propinsi\n3. Nasional\n4. Internasional")
     print('')
-    tingkat_pres = int(input("Masukkan angka untuk salah satu tingkat prestasi : "))
+    #Input dan validasi Tingkat Prestasi
+    while True:
+      try:
+        #Meminta user memasukkan angka untuk salah satu bidang prestasi
+        tingkat_pres = int(input("Masukkan angka untuk salah satu tingkat prestasi : "))
+        if tingkat_pres >= 1 and tingkat_pres <= 4:
+          break
+        else:
+          print("Maaf input salah, input yang dimasukkan harus salah satu angka dari 1-4.")
+      except ValueError:
+        print("Maaf input salah, input yang dimasukkan harus angka.")    
 
     #Tingkat Prestasi    
     if tingkat_pres == 1:
