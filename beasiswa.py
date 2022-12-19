@@ -7,7 +7,7 @@ import os
 def beasiswa1():
     #print("=" * 90) 
     #Input Data Mhs
-    print("Beasiswa jalur Keterangan Kurang Mampu")
+    print("Beasiswa jalur Bidikmisi")
     print('')
     nim = int(input("Masukkan NIM penerima beasiswa : "))
     nama = input("Masukkan nama penerima beasiswa : ")
@@ -45,7 +45,7 @@ def beasiswa1():
         if (sktm == "y" or sktm == "Y"):
             sktm = "Ada"
             print("=" * 90)
-            print("Beasiswa jalur Keterangan Kurang Mampu\n")
+            print("Beasiswa jalur Bidikmisi\n")
             print("Nim penerima beasiswa \t\t: ", nim)
             print("Nama penerima beasiswa \t\t: ", nama)
             print("Asal Fakultas \t\t\t: ", fakultas)
@@ -61,7 +61,7 @@ def beasiswa1():
         elif (sktm == "n" or sktm == "N"):
             sktm = "Belum Ada"
             print("=" * 90)
-            print("Beasiswa jalur Keterangan Kurang Mampu\n")
+            print("Beasiswa jalur Bidikmisi\n")
             print("Nim penerima beasiswa \t\t: ", nim)
             print("Nama penerima beasiswa \t\t: ", nama)
             print("Asal Fakultas \t\t\t: ", fakultas)
@@ -78,7 +78,7 @@ def beasiswa1():
         if (sktm == "y" or sktm == "Y"):
             sktm = "Ada"
             print("=" * 90)
-            print("Beasiswa jalur Keterangan Kurang Mampu\n")
+            print("Beasiswa jalur Bidikmisi\n")
             print("Nim penerima beasiswa \t\t: ", nim)
             print("Nama penerima beasiswa \t\t: ", nama)
             print("Asal Fakultas \t\t\t: ", fakultas)
@@ -94,7 +94,7 @@ def beasiswa1():
         elif (sktm == "n" or sktm == "N"):
             sktm = "Belum Ada"
             print("=" * 90)
-            print("Beasiswa jalur Keterangan Kurang Mampu\n")
+            print("Beasiswa jalur Bidikmisi\n")
             print("Nim penerima beasiswa \t\t: ", nim)
             print("Nama penerima beasiswa \t\t: ", nama)
             print("Asal Fakultas \t\t\t: ", fakultas)
@@ -343,7 +343,7 @@ while(kondisi == True):
     print("Program Kelayakan Beasiswa Kampus Mantap")
     print("=" * 90)
     print('Pilih kategori beasiswa')
-    print('1. Beasiswa jalur Keterangan Kurang Mampu')
+    print('1. Beasiswa jalur Bidikmisi')
     print('2. Beasiswa jalur Prestasi')
     print('3. Keluar')
 
